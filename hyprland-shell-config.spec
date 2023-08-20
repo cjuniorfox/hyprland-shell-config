@@ -17,6 +17,7 @@ BuildRequires: systemd-rpm-macros
 
 BuildArch:      noarch
 Requires:       beep
+Requires:       wob
 Requires:       amixer
 Requires:	brightnessctl
 

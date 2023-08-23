@@ -1,0 +1,76 @@
+#!/usr/bin/python3
+import curses
+
+def display_options(stdscr, description, options, current_option):
+    stdscr.clear()
+
+    stdscr.addstr(2, 2, description, curses.A_BOLD)
+
+    for i, opt in enumerate(options):
+        if i == current_option:
+            stdscr.addstr(4 + i, 2, opt, curses.A_REVERSE)
+        else:
+            stdscr.addstr(4 + i, 2, opt)
+
+    stdscr.refresh()
+
+def handle_input(stdscr, description, options):
+    current_option = 0
+
+    while True:
+        key = stdscr.getch()
+
+        if key == curses.KEY_UP and current_option > 0:
+            current_option -= 1
+        elif key == curses.KEY_DOWN and current_option < len(options) - 1:
+            current_option += 1
+        elif key == 10:  # Enter key
+            return current_option
+        elif key == ord('q'):
+            return -1
+
+        display_options(stdscr, description, options, current_option)
+
+
+def draw_screen(stdscr,description,options,actions,default_option):
+    display_options(stdscr, description, options, default_option)
+    selected_option = handle_input(stdscr, description, options)
+    if selected_option != -1:
+        actions[selected_option](stdscr)
+
+    stdscr.getch()
+
+def start_wizard(stdscr):
+    description = "Welcome to the Hyprland Shell setup wizard! You can call this script anytime running \"hyprland_shell_wizard\""
+    options = ["Continue","Close and ask me on next reboot", "Close, but don't ask me again!"]
+    actions = [choose_default_keybind]
+    draw_screen(stdscr,description,options,actions,0)
+
+def choose_default_keybind(stdscr):
+    description = "Which shutcuts schema you prefer for using?"
+    options = ["Switch to i3wm style shutcuts","No, keep Hyprland defaults."]
+    actions = [choose_taskbar, choose_taskbar]
+    draw_screen(stdscr,description,options,actions,0)
+
+def choose_taskbar(stdscr):
+    description = "What taskbar you would like to use?"
+    options = ["Waybar for Hyprland"]
+    actions = [waybar_style]
+    draw_screen(stdscr,description,options,actions,0)
+
+def waybar_style(stdscr):
+    description = "What waybar style you prefer to use?"
+    options = ["Default","Under Rainbow", "Transparent"]
+    actions = [save_changes]
+    draw_screen(stdscr, description,options,actions,0)
+
+def save_changes(stdscr):
+    print("Changes saved")
+    quit()
+
+def main(stdscr):
+    curses.curs_set(0)  # Hide the cursor
+    stdscr.clear()
+    start_wizard(stdscr)
+
+curses.wrapper(main)

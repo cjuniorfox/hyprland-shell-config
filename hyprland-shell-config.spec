@@ -1,47 +1,37 @@
-%global srcname checkupdate
-%define debug_package %{nil}
+%define name hyprland-config
+%define version 1.0
+%define release 1
+%define buildroot %{_tmppath}/%{name}-%{version}-%{release}-root
 
-Name:           hyprland-shell-config
-Version:        0.0.0
-Release:        0%{?dist}
-Summary:        Hyprland shell config scripts and installer
-Url:            https://pagure.io/%{srcname}
-# Sources can be obtained by
-# git clone https://pagure.io/checkupdate
-# cd checkupdate
-# tito build --tgz
-License:        GPLv3
+Summary: Hyprland Configuration Files
+Name: %{name}
+Version: %{version}
+Release: %{release}
+License: MIT
+Group: Applications/System
+BuildArch: noarch
 
-
-BuildRequires: systemd-rpm-macros
-
-BuildArch:      noarch
-Requires:       beep
-Requires:       wob
-Requires:       amixer
-Requires:	brightnessctl
-
-Source0:        %{name}-%{version}.tar.gz
+Requires: checkupdate hyprland-keyboard-changer hyprland-shell-waybar rofi-shutdown-menu wol-changer
 
 %description
-Hyprland shell config scripts and installer
+Hyprland Configuration Files for customizing system utilities.
 
 %prep
-%autosetup
+# Nothing to prepare
 
 %build
+# Nothing to build
 
 %install
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -m 755 changevolume %{buildroot}%{_bindir}
-install -m 755 changebright %{buildroot}%{_bindir}
-install -m 755 changekeybright %{buildroot}%{_bindir}
+rm -rf %{buildroot}
+mkdir -p %{buildroot}/etc/skel/.config
+cp -rvp hypr %{buildroot}/etc/skel/.config/hypr
+cp -rvp waybar %{buildroot}/etc/skel/.config/waybar
+cp -rvp rofi %{buildroot}/etc/skel/.config/rofi
+touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 
 %files
-%{_bindir}/changevolume
-%{_bindir}/changebright
-%{_bindir}/changekeybright
+/etc/skel/.config/hypr
+/etc/skel/.config/waybar
+/etc/skel/.config/rofi
 
-%post
-
-%changelog

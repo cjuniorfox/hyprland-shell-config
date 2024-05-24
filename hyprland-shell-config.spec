@@ -35,3 +35,5 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/waybar
 /etc/skel/.config/rofi
 
+%changelog
+

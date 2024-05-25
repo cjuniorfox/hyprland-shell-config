@@ -7,8 +7,8 @@ Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
 # Sources can be obtained by
-# git clone https://pagure.io/hyprland-shell-waybar
-# cd rofi-shutdown-menu
+# git clone https://pagure.io/hyprland-shell-config
+# cd hyperland-shell-config
 # tito build --tgz
 License:        GPLv3
 
@@ -41,6 +41,7 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/waybar
 /etc/skel/.config/rofi
 
-%changelog* Fri May 24 2024 Junior_FOX <cjuniorfox@gmail.com>
+%changelog
+* Fri May 24 2024 Junior_FOX <cjuniorfox@gmail.com>
 - new package built with tito
 

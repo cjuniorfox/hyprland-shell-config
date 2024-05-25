@@ -30,10 +30,10 @@ Hyprland Configuration Files for customizing system utilities.
 # Nothing to build
 
 %install
-mkdir -p %{buildroot}/etc/skel/.config
-install -d hypr %{buildroot}/etc/skel/.config/hypr
-install -d waybar %{buildroot}/etc/skel/.config/waybar
-install -d rofi %{buildroot}/etc/skel/.config/rofi
+mkdir -p %{buildroot}/etc/skel/.config/{hypr,waybar,rofi}
+cp -rp hypr/* %{buildroot}/etc/skel/.config/hypr/
+cp -rp waybar/* %{buildroot}/etc/skel/.config/waybar/
+cp -rp rofi/* %{buildroot}/etc/skel/.config/rofi/
 touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 
 %files
@@ -50,4 +50,3 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 
 * Fri May 24 2024 Junior_FOX <cjuniorfox@gmail.com>
 - new package built with tito
-

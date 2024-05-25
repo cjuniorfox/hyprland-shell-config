@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.0
+Version:        1.0.1
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -41,4 +41,6 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/waybar
 /etc/skel/.config/rofi
 
-%changelog
+%changelog* Fri May 24 2024 Junior_FOX <cjuniorfox@gmail.com>
+- new package built with tito
+

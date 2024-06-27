@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.5
+Version:        1.0.6
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -42,6 +42,9 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/rofi
 
 %changelog
+* Thu Jun 27 2024 Junior <cjuniorfox@gmail.com> 1.0.6-1
+- chore: replaced azote related stuff to waypaper (cjuniorfox@gmail.com)
+
 * Thu Jun 27 2024 Junior <cjuniorfox@gmail.com> 1.0.5-1
 - removed the master is new master (cjuniorfox@gmail.com)
 

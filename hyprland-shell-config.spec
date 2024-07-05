@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.7
+Version:        1.0.8
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -42,6 +42,10 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/rofi
 
 %changelog
+:# Create your changelog entry below:
+* Thu Jul 04 2024 Junior <cjuniorfox@gmail.com> 1.0.8-1
+- chore: pavucontrol as float (cjuniorfox@gmail.com)
+
 * Thu Jun 27 2024 Junior <cjuniorfox@gmail.com> 1.0.7-1
 - bugfix: error at waypaper class namimg (cjuniorfox@gmail.com)
 

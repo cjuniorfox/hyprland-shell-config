@@ -42,7 +42,6 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/rofi
 
 %changelog
-:# Create your changelog entry below:
 * Thu Jul 04 2024 Junior <cjuniorfox@gmail.com> 1.0.8-1
 - chore: pavucontrol as float (cjuniorfox@gmail.com)
 

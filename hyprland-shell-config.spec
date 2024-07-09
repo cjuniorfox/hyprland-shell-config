@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.8
+Version:        1.0.9
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -42,6 +42,13 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/rofi
 
 %changelog
+* Tue Jul 09 2024 Junior <cjuniorfox@gmail.com> 1.0.9-1
+- chore: fixed changelog spec file (cjuniorfox@gmail.com)
+- chore: created a readme file (cjuniorfox@gmail.com)
+- chore: update the dependencies. Removed checkupdate as a requirement
+  (cjuniorfox@gmail.com)
+- chore: removed unused scripts (cjuniorfox@gmail.com)
+
 * Thu Jul 04 2024 Junior <cjuniorfox@gmail.com> 1.0.8-1
 - chore: pavucontrol as float (cjuniorfox@gmail.com)
 

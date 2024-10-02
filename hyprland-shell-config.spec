@@ -15,7 +15,7 @@ License:        GPLv3
 %define buildroot %{_tmppath}/%{name}-%{version}-%{release}-root
 
 BuildArch: noarch
-Requires: waybar, hyprland, hyprlock, rofi, hyprland-keyboard-changer, hyprland-shell-waybar, rofi-shutdown-menu
+Requires: hyprland-keyboard-changer, hyprland-shell-waybar, rofi-shutdown-menu
 
 Source0: %{name}-%{version}.tar.gz
 

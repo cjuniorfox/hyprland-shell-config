@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.11
+Version:        1.0.12
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -42,6 +42,9 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/rofi
 
 %changelog
+* Wed Oct 02 2024 Junior <cjuniorfox@gmail.com> 1.0.12-1
+- removal of the requirement for Hyprland (cjuniorfox@gmail.com)
+
 * Wed Oct 02 2024 Junior <cjuniorfox@gmail.com> 1.0.11-1
 - replace swaylock to hyprlock (cjuniorfox@gmail.com)
 

@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.10
+Version:        1.0.11
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -15,7 +15,7 @@ License:        GPLv3
 %define buildroot %{_tmppath}/%{name}-%{version}-%{release}-root
 
 BuildArch: noarch
-Requires: waybar, hyprland, rofi, hyprland-keyboard-changer, hyprland-shell-waybar, rofi-shutdown-menu
+Requires: waybar, hyprland, hyprlock, rofi, hyprland-keyboard-changer, hyprland-shell-waybar, rofi-shutdown-menu
 
 Source0: %{name}-%{version}.tar.gz
 
@@ -42,6 +42,9 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/rofi
 
 %changelog
+* Wed Oct 02 2024 Junior <cjuniorfox@gmail.com> 1.0.11-1
+- replace swaylock to hyprlock (cjuniorfox@gmail.com)
+
 * Wed Jul 24 2024 Junior <cjuniorfox@gmail.com> 1.0.10-1
 - Added the ability to alt+tab windows (cjuniorfox@gmail.com)
 

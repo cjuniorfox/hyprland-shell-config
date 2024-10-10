@@ -1,0 +1,125 @@
+/**
+ * Adapted from Nordic rofi theme
+ * Adapted by Junior <cjuniorfox@gmail.com>
+ *
+ */
+
+
+* {
+    message: #2e3440;
+    inputbar: #eceff4;
+    inputbar-bg-color: #373B41;
+    inputbar-br-color: #575B61;
+    message-bg-color: #8fbcbb;
+    foreground: #81a1c1;
+    backlight: #ccffeedd;
+    background-color:  transparent;
+    highlight: underline bold #eceff4;
+    transparent: rgba(46,52,64,0);
+    element-text-color: rgb(216, 222, 233);
+    element-bg-color: #575B61;
+    element-text-color: #C5C8C6;
+    listview-br-color: #575B61;
+    listview-bg-color: #282A2EDD;
+}
+
+window {
+    width:840;
+    transparency: "real";
+    margin: 14px;
+    border:  0;
+    border-radius: 8px;
+    background-color: @transparent;
+    spacing: 0;
+    children:  [mainbox];
+    orientation: horizontal;
+    location: south;
+}
+
+mainbox {
+    spacing: 0;
+    children: [ inputbar, message, listview ];
+}
+
+message {
+    color: @message;
+    padding: 7px;
+    border-color: @foreground;
+    border:  0 3px 3px 3px;
+    background-color: @message-bg-color;
+}
+
+inputbar {
+    color: @inputbar;
+    padding: 16px;
+    background-color: @inputbar-bg-color;
+    border: 1px;
+    border-radius: 8px 8px 0 0;
+    border-color: @inputbar-br-color;
+}
+
+entry, prompt, case-indicator {
+    text-font: inherit;
+    text-color:inherit;
+}
+
+prompt {
+    margin: 0 1px 0 0 ;
+}
+
+listview {
+    columns: 10;
+    lines: 5;
+    padding: 11px;
+    border-radius: 0 0 8px 8px ;
+    border-color: @listview-br-color;
+    border: 0 1px 1px 1px;
+    background-color: @listview-bg-color;
+    dynamic: true;
+    layout: vertical;
+}
+
+element {
+    orientation: horizontal;
+    padding: 4px;
+    vertical-align: 0.5;
+    border-radius: 6px;
+    background-color: transparent;
+    color: @foreground;
+    text-color: @element-text-color;
+}
+
+element-icon {
+    padding: 0;
+    text-color: inherit;
+    size: 3em;
+    cursor: inherit;
+}
+
+element selected.normal {
+    background-color: @element-bg-color;
+    text-color: @element-text-color;
+}
+
+element-text {
+    padding: 14px;
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0;
+}
+
+button {
+    padding: 8px;
+    color: @foreground;
+    horizontal-align: 0.5;
+
+    border: 3px 0 3px 3px;
+    border-radius: 11px 0 0 11px;
+    border-color: @foreground;
+}
+
+button selected normal {
+    border: 3px 0 3px 3px;
+    border-color: @foreground;
+}

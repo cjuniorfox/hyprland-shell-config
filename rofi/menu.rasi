@@ -1,46 +1,29 @@
 /**
- * Nordic rofi theme
- * Adapted by undiabler <undiabler@gmail.com>
- *
- * Nord Color palette imported from https://www.nordtheme.com/
+ * Adapted from Nordic rofi theme
+ * Adapted by Junior <cjuniorfox@gmail.com>
  *
  */
 
 
 * {
-	nord0: #2e3440;
-	nord1: #3b4252;
-	nord2: #434c5e;
-	nord3: #4c566a;
-
-	nord4: #d8dee9;
-	nord5: #e5e9f0;
-	nord6: #eceff4;
-
-	nord7: #8fbcbb;
-	nord8: #88c0d0;
-	nord9: #81a1c1;
-	nord10: #5e81ac;
-	nord11: #bf616a;
-
-	nord12: #d08770;
-	nord13: #ebcb8b;
-	nord14: #a3be8c;
-	nord15: #b48ead;
-
-        foreground: @nord9;
-        backlight: #ccffeedd;
-        background-color:  transparent;
-    
-        highlight: underline bold #eceff4;
-
-        transparent: rgba(46,52,64,0);
+    message: #2e3440;
+    inputbar: #eceff4;
+    inputbar-bg-color: #373B41;
+    inputbar-br-color: #575B61;
+    message-bg-color: #8fbcbb;
+    foreground: #81a1c1;
+    backlight: #ccffeedd;
+    background-color:  transparent;
+    highlight: underline bold #eceff4;
+    transparent: rgba(46,52,64,0);
+    element-text-color: rgb(216, 222, 233);
+    element-bg-color: #575B61;
+    element-text-color: #C5C8C6;
+    listview-br-color: #575B61;
+    listview-bg-color: #282A2EDD;
 }
 
 window {
-//    width: 735px;
-//    location: northwest;
-//    anchor:   northwest;
     transparency: "real";
     margin: 14px;
     border:  0;
@@ -57,20 +40,20 @@ mainbox {
 }
 
 message {
-    color: @nord0;
+    color: @message;
     padding: 7px;
     border-color: @foreground;
     border:  0 3px 3px 3px;
-    background-color: @nord7;
+    background-color: @message-bg-color;
 }
 
 inputbar {
-    color: @nord6;
+    color: @inputbar;
     padding: 16px;
-    background-color: #373B41;
+    background-color: @inputbar-bg-color;
     border: 1px;
     border-radius: 8px 8px 0 0;
-    border-color: #575B61;
+    border-color: @inputbar-br-color;
 }
 
 entry, prompt, case-indicator {
@@ -87,9 +70,9 @@ listview {
     lines: 8;
     padding: 11px;
     border-radius: 0 0 8px 8px ;
-    border-color: #575B61;
+    border-color: @listview-br-color;
     border: 0 1px 1px 1px;
-    background-color: #282A2EDD;
+    background-color: @listview-bg-color;
     dynamic: true;
     layout: vertical;
 }
@@ -101,27 +84,27 @@ element {
     border-radius: 6px;
     background-color: transparent;
     color: @foreground;
-    text-color: rgb(216, 222, 233);
+    text-color: @element-text-color;
 }
 
 element-icon {
-    padding:                     0;
-    text-color:                  inherit;
-    size:                        3em;
-    cursor:                      inherit;
+    padding: 0;
+    text-color: inherit;
+    size: 3em;
+    cursor: inherit;
 }
 
 element selected.normal {
-	background-color: #575B61;
-	text-color: #C5C8C6;
+    background-color: @element-bg-color;
+    text-color: @element-text-color;
 }
 
 element-text {
-    padding:          14px;
+    padding: 14px;
     background-color: inherit;
-    text-color:       inherit;
-    vertical-align:              0.5;
-    horizontal-align:            0;
+    text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0;
 }
 
 button {

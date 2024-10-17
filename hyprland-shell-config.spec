@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.18
+Version:        1.0.19
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -42,6 +42,9 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/rofi
 
 %changelog
+* Thu Oct 17 2024 Junior <cjuniorfox@gmail.com> 1.0.19-1
+- cleanup and fix icons on top bar (cjuniorfox@gmail.com)
+
 * Mon Oct 14 2024 Junior <cjuniorfox@gmail.com> 1.0.18-1
 - dwindle, added no gaps when only one window (cjuniorfox@gmail.com)
 

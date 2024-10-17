@@ -9,6 +9,11 @@
     "on-click": "kitty",
     "tooltip": false
   },
+  "custom/gnome-software": {
+    "format": " ",
+    "on-click" : "gnome-software",
+    "tooltip": false
+  },
   "custom/nautilus": {
     "format": " ",
     "on-click": "nautilus",

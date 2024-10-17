@@ -4,9 +4,7 @@
     "custom/firefox",
     "custom/kitty",
     "custom/nautilus",
-    "custom/code",
-    "custom/teams",
-    "custom/outlook",
+    "custom/gnome-software",    
     "wlr/taskbar",
     "hyprland/window",
     "custom/close_window"

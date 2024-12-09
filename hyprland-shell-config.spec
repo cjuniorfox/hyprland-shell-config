@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.21
+Version:        1.0.22
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -42,6 +42,9 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/rofi
 
 %changelog
+* Sun Dec 08 2024 Junior <cjuniorfox@gmail.com> 1.0.22-1
+- fixed volume down not working (cjuniorfox@gmail.com)
+
 * Tue Nov 12 2024 Junior <cjuniorfox@gmail.com> 1.0.21-1
 - split rules and resolved shadows (cjuniorfox@gmail.com)
 - lxqt polkit as float (cjuniorfox@gmail.com)

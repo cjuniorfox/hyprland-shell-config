@@ -42,15 +42,18 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/rofi
 
 %changelog
+* Wed Dec 18 2024 Junior_FOX <cjuniorfox@gmail.com> 1.0.22-1
+- fixed smartgaps accordgly with the following commit: https://github.com/hyprw
+
+* Tue Nov 12 2024 Junior <cjuniorfox@gmail.com> 1.0.21-1
+- split rules and resolved shadows (cjuniorfox@gmail.com)
+- lxqt polkit as float (cjuniorfox@gmail.com)
+
 * Wed Dec 11 2024 Junior <cjuniorfox@gmail.com> 1.0.23-1
 - added bibata theme cursor to the default file (cjuniorfox@gmail.com)
 
 * Sun Dec 08 2024 Junior <cjuniorfox@gmail.com> 1.0.22-1
 - fixed volume down not working (cjuniorfox@gmail.com)
-
-* Tue Nov 12 2024 Junior <cjuniorfox@gmail.com> 1.0.21-1
-- split rules and resolved shadows (cjuniorfox@gmail.com)
-- lxqt polkit as float (cjuniorfox@gmail.com)
 
 * Sun Nov 03 2024 Junior <cjuniorfox@gmail.com> 1.0.20-1
 - replaced gnome polkit by lxqt polkit (cjuniorfox@gmail.com)

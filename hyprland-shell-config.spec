@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.23
+Version:        1.0.24
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -42,6 +42,14 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/rofi
 
 %changelog
+* Sat Dec 21 2024 Junior <cjuniorfox@gmail.com> 1.0.24-1
+- fixed window rules (cjuniorfox@gmail.com)
+- Automatic commit of package [hyprland-shell-config] release [1.0.22-1].
+  (cjuniorfox@gmail.com)
+- fixed smartgaps accordgly with the following commit: https://github.com/hyprw
+  m/Hyprland/commit/dca75db127fedc58fc85ae0e6e47162e3d5d16f9
+  (cjuniorfox@gmail.com)
+
 * Wed Dec 18 2024 Junior_FOX <cjuniorfox@gmail.com> 1.0.22-1
 - fixed smartgaps accordgly with the following commit: https://github.com/hyprw
 

@@ -42,8 +42,8 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/rofi
 
 %changelog
-* Sat Dec 21 2024 Junior <cjuniorfox@gmail.com> 1.0.24-1
-- fixed window rules (cjuniorfox@gmail.com)
+* Sun Mar 09 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.24-1
+- fixed screen brightness down (cjuniorfox@gmail.com)
 - Automatic commit of package [hyprland-shell-config] release [1.0.22-1].
   (cjuniorfox@gmail.com)
 - fixed smartgaps accordgly with the following commit: https://github.com/hyprw

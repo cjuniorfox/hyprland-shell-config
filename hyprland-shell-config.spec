@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.24
+Version:        1.0.25
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -42,6 +42,14 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/rofi
 
 %changelog
+* Sun Mar 09 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.25-1
+- Automatic commit of package [hyprland-shell-config] release [1.0.24-1].
+  (cjuniorfox@gmail.com)
+- fixed screen brightness down (cjuniorfox@gmail.com)
+- Automatic commit of package [hyprland-shell-config] release [1.0.24-1].
+  (cjuniorfox@gmail.com)
+- fixed window rules (cjuniorfox@gmail.com)
+
 * Sun Mar 09 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.24-1
 - fixed screen brightness down (cjuniorfox@gmail.com)
 - Automatic commit of package [hyprland-shell-config] release [1.0.22-1].

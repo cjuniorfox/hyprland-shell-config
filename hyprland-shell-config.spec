@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.26
+Version:        1.0.27
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -42,6 +42,9 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/rofi
 
 %changelog
+* Fri May 02 2025 Junior <cjuniorfox@gmail.com> 1.0.27-1
+- waybar is not a autostart service (cjuniorfox@gmail.com)
+
 * Fri Apr 18 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.26-1
 - removed the startup of sway-audio-idle-inhibitor (cjuniorfox@gmail.com)
 

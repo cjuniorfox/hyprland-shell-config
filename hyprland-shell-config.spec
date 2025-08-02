@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.28
+Version:        1.0.29
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -42,6 +42,11 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/rofi
 
 %changelog
+* Fri Aug 01 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.29-1
+- added hypridle to autostart and fixed reload for waybar
+  (cjuniorfox@gmail.com)
+- Update hypr/autostart.conf (cjuniorfox@gmail.com)
+
 * Fri May 02 2025 Junior <cjuniorfox@gmail.com> 1.0.28-1
 - replaced dunst to swaync (cjuniorfox@gmail.com)
 

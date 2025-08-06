@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.32
+Version:        1.0.33
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -43,6 +43,9 @@ cp -rp environment.d/* %{buildroot}/etc/skel/.config/environment.d/
 /etc/skel/.config/rofi
 /etc/skel/.config/environment.d
 %changelog
+* Wed Aug 06 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.33-1
+- fixed polkit agent (cjuniorfox@gmail.com)
+
 * Wed Aug 06 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.32-1
 - Added autostart of lxqt-polkit-agent and some cleaning up
   (cjuniorfox@gmail.com)

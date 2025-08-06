@@ -30,17 +30,18 @@ Hyprland Configuration Files for customizing system utilities.
 # Nothing to build
 
 %install
-mkdir -p %{buildroot}/etc/skel/.config/{hypr,waybar,rofi}
+mkdir -p %{buildroot}/etc/skel/.config/{hypr,waybar,rofi,environment.d}
 cp -rp hypr/* %{buildroot}/etc/skel/.config/hypr/
 cp -rp waybar/* %{buildroot}/etc/skel/.config/waybar/
 cp -rp rofi/* %{buildroot}/etc/skel/.config/rofi/
+cp -rp environment.d/* %{buildroot}/etc/skel/.config.d/environment.d/
 touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 
 %files
 /etc/skel/.config/hypr
 /etc/skel/.config/waybar
 /etc/skel/.config/rofi
-
+/etc/skel/.config/enviroment.d
 %changelog
 * Wed Aug 06 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.30-1
 - replaced the default to the jxl file (cjuniorfox@gmail.com)

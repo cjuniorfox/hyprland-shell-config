@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.30
+Version:        1.0.31
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -43,6 +43,11 @@ cp -rp environment.d/* %{buildroot}/etc/skel/.config/environment.d/
 /etc/skel/.config/rofi
 /etc/skel/.config/environment.d
 %changelog
+* Wed Aug 06 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.31-1
+- fixed enviroment name (cjuniorfox@gmail.com)
+- fixed enviroment name (cjuniorfox@gmail.com)
+- Converted to enviroment variable from systemd (cjuniorfox@gmail.com)
+
 * Wed Aug 06 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.30-1
 - replaced the default to the jxl file (cjuniorfox@gmail.com)
 

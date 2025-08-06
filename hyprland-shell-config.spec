@@ -34,8 +34,8 @@ mkdir -p %{buildroot}/etc/skel/.config/{hypr,waybar,rofi,environment.d}
 cp -rp hypr/* %{buildroot}/etc/skel/.config/hypr/
 cp -rp waybar/* %{buildroot}/etc/skel/.config/waybar/
 cp -rp rofi/* %{buildroot}/etc/skel/.config/rofi/
-cp -rp environment.d/* %{buildroot}/etc/skel/.config.d/environment.d/
 touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
+cp -rp environment.d/* %{buildroot}/etc/skel/.config/environment.d/
 
 %files
 /etc/skel/.config/hypr

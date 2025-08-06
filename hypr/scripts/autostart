@@ -1,4 +1,0 @@
-#!/usr/bin/sh
-echo "Auto Starting directories"
-
-find /etc/xdg/autostart/*.desktop -exec sh -c 'gio launch {} &' \;

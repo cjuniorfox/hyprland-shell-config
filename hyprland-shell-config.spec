@@ -41,7 +41,7 @@ touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 /etc/skel/.config/hypr
 /etc/skel/.config/waybar
 /etc/skel/.config/rofi
-/etc/skel/.config/enviroment.d
+/etc/skel/.config/environment.d
 %changelog
 * Wed Aug 06 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.30-1
 - replaced the default to the jxl file (cjuniorfox@gmail.com)

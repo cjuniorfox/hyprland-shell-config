@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.34
+Version:        1.0.35
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -43,6 +43,10 @@ cp -rp environment.d/* %{buildroot}/etc/skel/.config/environment.d/
 /etc/skel/.config/rofi
 /etc/skel/.config/environment.d
 %changelog
+* Fri Sep 12 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.35-1
+- Update to the hyprland-conf to match the version 0.51.0
+  (cjuniorfox@gmail.com)
+
 * Wed Aug 27 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.34-1
 - 
 

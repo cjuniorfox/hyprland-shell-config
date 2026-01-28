@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.35
+Version:        1.0.36
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -52,6 +52,10 @@ cp -rp systemd/user/* %{buildroot}/etc/skel/.config/systemd/user/
 /etc/skel/.config/systemd/user/*
 
 %changelog
+* Wed Jan 28 2026 Junior_FOX <cjuniorfox@gmail.com> 1.0.36-1
+- Add systemd service files and update installation paths
+  (cjuniorfox@gmail.com)
+
 * Fri Sep 12 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.35-1
 - Update to the hyprland-conf to match the version 0.51.0
   (cjuniorfox@gmail.com)

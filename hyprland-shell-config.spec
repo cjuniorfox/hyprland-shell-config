@@ -30,19 +30,27 @@ Hyprland Configuration Files for customizing system utilities.
 # Nothing to build
 
 %install
-mkdir -p %{buildroot}/etc/skel/.config/{hypr,waybar,rofi,environment.d}
+mkdir -p %{buildroot}/etc/skel/.config/{hypr,waybar,rofi,environment.d,systemd/user}
 cp -rp hypr/* %{buildroot}/etc/skel/.config/hypr/
 cp -rp waybar/* %{buildroot}/etc/skel/.config/waybar/
 cp -rp rofi/* %{buildroot}/etc/skel/.config/rofi/
 touch %{buildroot}/etc/skel/.config/hypr/monitors.conf
 cp -rp environment.d/* %{buildroot}/etc/skel/.config/environment.d/
+cp -rp systemd/user/* %{buildroot}/etc/skel/.config/systemd/user/
 
 %files
-/etc/skel/.config/hypr
-/etc/skel/.config/waybar
-/etc/skel/.config/rofi
-/etc/skel/.config/environment.d
-%changelog
+%dir /etc/skel/.config/hypr
+%dir /etc/skel/.config/waybar
+%dir /etc/skel/.config/rofi
+%dir /etc/skel/.config/environment.d
+%dir /etc/skel/.config/systemd/user
+%dir /etc/skel/.config/systemd/user/graphical-session.target.wants
+/etc/skel/.config/hypr/*
+/etc/skel/.config/waybar/*
+/etc/skel/.config/rofi/*
+/etc/skel/.config/environment.d/*
+/etc/skel/.config/systemd/user/*
+
 * Fri Sep 12 2025 Junior_FOX <cjuniorfox@gmail.com> 1.0.35-1
 - Update to the hyprland-conf to match the version 0.51.0
   (cjuniorfox@gmail.com)

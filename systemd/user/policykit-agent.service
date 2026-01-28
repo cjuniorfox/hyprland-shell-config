@@ -1,0 +1,9 @@
+[Unit]
+Description=LxQT polkit agent
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/libexec/lxqt-policykit-agent
+
+[Install]
+WantedBy=graphical-session.target

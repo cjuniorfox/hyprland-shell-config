@@ -37,6 +37,7 @@ sudo rpm -i hyprland-shell-config-1.0.8-1.noarch.rpm
 ```
 
 ## Usage
+
 After installation, the configuration files will be copied to the appropriate directories. If the configuration folders do not exist, they will be created.
 
 ```bash

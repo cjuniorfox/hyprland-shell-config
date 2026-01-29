@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name:           hyprland-shell-config
-Version:        1.0.36
+Version:        1.0.37
 Release:        1%{?dist}
 Summary:        Hyperland shell configuration files
 Url:            https://pagure.io/%{srcname}
@@ -52,6 +52,10 @@ cp -rp systemd/user/* %{buildroot}/etc/skel/.config/systemd/user/
 /etc/skel/.config/systemd/user/*
 
 %changelog
+* Thu Jan 29 2026 Junior_FOX <cjuniorfox@gmail.com> 1.0.37-1
+- chore: enabled autostart services and removed alert about qtutils not
+  installed (cjuniorfox@gmail.com)
+
 * Wed Jan 28 2026 Junior_FOX <cjuniorfox@gmail.com> 1.0.36-1
 - Add systemd service files and update installation paths
   (cjuniorfox@gmail.com)

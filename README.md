@@ -4,16 +4,19 @@ Hyprland Configuration Files for customizing system utilities.
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Requirements](#requirements)
-- [Files](#files)
-- [License](#license)
+- [Hyprland Shell Config](#hyprland-shell-config)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Requirements](#requirements)
+  - [Files](#files)
+  - [License](#license)
 
 ## Overview
 
 This package provides configuration files for customizing system utilities in Hyprland. It includes configurations for:
+
 - Hyprland
 - Waybar
 - Rofi
